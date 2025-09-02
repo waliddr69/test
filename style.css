@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: linear-gradient(to right, #6a11cb, #2575fc); 
+}
+
+header{
+    width: 100%;
+    height: 50%;
+}
+
+nav{
+    width: 100%;
+    height: 30%;
+    background-color: navy;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+
+ul{
+    list-style: none;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+
+}
+
+a:hover  img{
+    transform:translateY(5px);
+    opacity: 0.5;
+    transition: all ease 300ms;
+}
+div{
+    width: 100px;
+    height: 150px;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: 70px;
+    
+}
+
+
+
+/* Initially, hide the div */
+div {
+    opacity: 0;  /* Make it invisible */
+    visibility: hidden;  /* Ensure it doesn't take up space */
+    transform: rotate3d(1, 1, 1, 45deg);  /* Start it slightly above */
+    transition: opacity 300ms ease, transform 300ms ease, visibility 300ms ease;  /* Smooth transition */
+}
+
+/* When the link is hovered, show the div */
+li a:hover ~ div {
+    opacity: 1;  /* Fade it in */
+    visibility: visible;  /* Make it take up space */
+    transform: rotate(0);  /* Move it into place */
+}
+
+
+
+
+
+
+
